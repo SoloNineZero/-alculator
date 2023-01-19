@@ -30,15 +30,17 @@ class ViewController: UIViewController {
     @IBAction func buttons(_ sender: UIButton) {
         if resultLabel.text != "" && sender.tag != 10 && sender.tag != 15 {
             firstNumber = Double(resultLabel.text!)!
-            if sender.tag == 11 {
+            
+            switch sender.tag {
+            case 11:
                 resultLabel.text = "/"
-            } else if sender.tag == 12 {
+            case 12:
                 resultLabel.text = "x"
-            } else if sender.tag == 13 {
+            case 13:
                 resultLabel.text = "-"
-            } else if sender.tag == 14 {
+            case 14:
                 resultLabel.text = "+"
-            } else if sender.tag == 15 {
+            default:
                 resultLabel.text = "="
             }
             operation = sender.tag
