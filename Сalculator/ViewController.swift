@@ -45,6 +45,7 @@ class ViewController: UIViewController {
             }
             operation = sender.tag
             mathSign = true
+            // математические действия
         } else if sender.tag == 15 {
             if operation == 11 {
                 resultLabel.text = String(firstNumber / numberFromScreen)
@@ -55,6 +56,7 @@ class ViewController: UIViewController {
             } else if operation == 14 {
                 resultLabel.text = String(firstNumber + numberFromScreen)
             }
+            // сброс значений
         } else if sender.tag == 10 {
             resultLabel.text = ""
             firstNumber = 0
